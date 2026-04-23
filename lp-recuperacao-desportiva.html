@@ -2,14 +2,6 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRHJ9DXWGT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JRHJ9DXWGT');
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Recuperação para Desportistas em Lisboa · Ténis, Padel · Joana Clarinha</title>
 <meta name="description" content="Jogas ténis, padel ou crossfit e o corpo nunca volta totalmente ao zero? Thai Yoga Massage em Lisboa com Joana Clarinha. Recuperação real. 90 min · €75.">
@@ -285,14 +277,48 @@ footer{background:var(--cinza2);padding:1.75rem 5vw;display:flex;justify-content
 <footer>
   <span class="footer-brand">Joana Clarinha</span>
   <span>Thai Yoga Massage · Lisboa</span>
-  <a href="/" style="color:var(--cinza3);text-decoration:none">← Voltar ao site principal</a>
+  <a href="/politica-privacidade.html" style="color:var(--cinza3);font-size:0.78rem;text-decoration:none;opacity:0.7;">Política de Privacidade</a>
 </footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--cinza);color:var(--cream);padding:1.25rem 5vw;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;font-size:0.82rem;line-height:1.6;">
+  <p style="margin:0;color:rgba(246,238,224,0.8);max-width:600px;">Este site usa cookies de análise para entender como é visitado. Podes aceitar ou recusar. <a href="/politica-privacidade.html" style="color:var(--cream);opacity:0.7;text-decoration:underline;">Saber mais</a></p>
+  <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+    <button id="cookie-reject" style="background:transparent;border:1px solid rgba(246,238,224,0.3);color:rgba(246,238,224,0.7);padding:0.5rem 1.25rem;font-family:var(--sans);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Recusar</button>
+    <button id="cookie-accept" style="background:var(--terra);border:none;color:var(--cream);padding:0.5rem 1.25rem;font-family:var(--sans);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Aceitar</button>
+  </div>
+</div>
 
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>50),{passive:true});
 const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target)}})},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+
+<script>
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JRHJ9DXWGT';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-JRHJ9DXWGT');
+  }
+  var consent = localStorage.getItem('jc-cookie-consent');
+  var banner = document.getElementById('cookie-banner');
+  if (consent === 'accepted') { loadGA(); if (banner) banner.style.display = 'none'; }
+  else if (consent === 'rejected') { if (banner) banner.style.display = 'none'; }
+  else { if (banner) banner.style.display = 'flex'; }
+  document.getElementById('cookie-accept').addEventListener('click', function() {
+    localStorage.setItem('jc-cookie-consent', 'accepted'); loadGA(); banner.style.display = 'none';
+  });
+  document.getElementById('cookie-reject').addEventListener('click', function() {
+    localStorage.setItem('jc-cookie-consent', 'rejected'); banner.style.display = 'none';
+  });
 </script>
 
 <a href="https://wa.me/351911504104?text=Olá%20Joana%2C%20vi%20a%20página%20de%20recuperação%20desportiva%20e%20tenho%20uma%20dúvida." class="wa-float" target="_blank" rel="noopener" aria-label="Contactar Joana Clarinha no WhatsApp">
