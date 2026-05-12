@@ -148,21 +148,7 @@ footer {
 .wa-float-sub { font-size: 0.65rem; color: rgba(246,238,224,0.5); letter-spacing: 0.06em; }
 @keyframes wa-appear { to { opacity: 1; transform: translateY(0); } }
 
-/* ── LANDING PAGES: CHECK LIST ── */
-.check-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
-.check-item {
-  display: flex; gap: 1rem; align-items: flex-start;
-  border-top: 1px solid var(--cream2); padding: 1rem 0;
-  font-size: 0.92rem; color: var(--cinza2); line-height: 1.7;
-}
-.check-item:last-child { border-bottom: 1px solid var(--cream2); }
-.check-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--terra); flex-shrink: 0; margin-top: 0.55rem;
-}
-
 /* ── LANDING PAGES: SINAIS ── */
-#sinais { background: var(--cinza); padding: 5rem 5vw; }
 .sinais-inner { max-width: 800px; margin: 0 auto; text-align: center; }
 .sinais-title {
   font-family: var(--serif); font-size: clamp(1.8rem,3vw,2.6rem);
@@ -171,33 +157,18 @@ footer {
 .sinais-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-bottom: 3rem; }
 .sinal {
   background: rgba(255,255,255,0.05); padding: 2rem 1.5rem;
-  border: 1px solid rgba(255,255,255,0.07); text-align: left;
+  border: 1px solid rgba(255,255,255,0.07); text-align: center;
 }
-.sinal-icon { width: 32px; height: 2px; background: var(--terra); margin-bottom: 1.25rem; }
+.sinal-icon { width: 32px; height: 2px; background: var(--terra); margin: 0 auto 1.25rem; }
 .sinal-h { font-family: var(--serif); font-size: 1.05rem; color: var(--cream); margin-bottom: 0.5rem; font-weight: 400; }
 .sinal-p { font-size: 0.85rem; color: rgba(246,238,224,0.6); line-height: 1.8; }
 
 /* ── LANDING PAGES: PARA QUEM ── */
-#para-quem { padding: 7rem 5vw; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-.pq-right { padding-top: 0.5rem; }
-.quote-block {
-  background: var(--terra-pale); border-left: 3px solid var(--terra);
-  padding: 2rem 2rem 2rem 2.5rem; margin-bottom: 2rem;
-}
-.quote-block p { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--cinza); line-height: 1.6; }
+#para-quem { background: var(--cinza); padding: 7rem 5vw; }
 
 /* ── LANDING PAGES: TRANSFORMAÇÃO ── */
-#transformacao { background: var(--terra-pale); padding: 7rem 5vw; }
-.transf-inner { max-width: 960px; margin: 0 auto; }
-.transf-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; margin-top: 3rem; }
-.transf-card {
-  background: var(--off); padding: 2.5rem;
-  border-bottom: 3px solid transparent; transition: border-color 0.3s;
-}
-.transf-card:hover { border-color: var(--terra); }
-.transf-num { font-family: var(--serif); font-size: 2rem; color: var(--terra); opacity: 0.35; line-height: 1; margin-bottom: 1rem; }
-.transf-h { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--cinza); margin-bottom: 0.5rem; }
-.transf-p { font-size: 0.88rem; color: var(--cinza3); line-height: 1.85; font-weight: 400; }
+#transformacao { background: var(--off); padding: 7rem 5vw; }
+body.lp-desportiva #transformacao { background: var(--cinza); }
 
 /* ── LANDING PAGES: TESTEMUNHOS ── */
 #testemunhos { padding: 6rem 5vw; background: var(--off); }
@@ -240,8 +211,6 @@ footer {
   body.lp-desportiva .hero-img img { object-position: center 15%; }
   body.lp-stress .hero-img img { object-position: right center; }
   .sinais-grid { grid-template-columns: 1fr; }
-  #para-quem { grid-template-columns: 1fr; gap: 3rem; }
-  .transf-grid { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   .wa-float { bottom: 1.25rem; right: 1.25rem; padding: 0.65rem 1rem 0.65rem 0.85rem; }
   .wa-float-sub { display: none; }
@@ -266,25 +235,14 @@ body.lp-stress .hero-img { background: var(--verde); }
 body.lp-stress .hero-img img { opacity: 0.6; mix-blend-mode: luminosity; }
 body.lp-stress #cta-final { padding: 7rem 5vw; }
 
-/* ── LANDING PAGES: PRESENÇA ── */
-#presenca { background: var(--verde); padding: 5rem 5vw; text-align: center; }
-.pres-inner { max-width: 640px; margin: 0 auto; }
-.pres-h { font-family:var(--serif); font-size:clamp(1.6rem,2.8vw,2.4rem); font-weight:400; font-style:italic; line-height:1.4; color:var(--cream); margin-bottom:1.5rem; }
-.pres-p { font-size:0.95rem; color:rgba(246,238,224,0.65); line-height:1.85; margin-bottom:2.5rem; }
-
 /* ── LANDING PAGES: ASSIMETRIA ── */
 #assimetria { background: var(--off); padding: 6rem 5vw; }
 .assim-inner { max-width: 760px; margin: 0 auto; }
 .assim-quote { font-family:var(--serif); font-size:clamp(1.4rem,2.5vw,2rem); font-weight:400; font-style:italic; line-height:1.5; color:var(--cinza); border-left:3px solid var(--terra); padding-left:2rem; margin-bottom:3rem; }
 .assim-body { font-size:0.95rem; color:var(--cinza3); line-height:1.9; margin-bottom:2.5rem; font-weight:400; }
 
-/* ── LANDING PAGES: SPORT TAGS ── */
-.sport-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem; }
-.sport-tag { font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.4rem 1rem; background:var(--verde); color:var(--cream); opacity:0.85; }
-
 /* ── LANDING PAGES: SHARED OVERRIDES ── */
 .sinais-title { font-size: clamp(1.8rem,3vw,2.8rem); }
-.pq-right { padding-top: 1rem; }
 .btn-wa { background: var(--terra); color: var(--cream); }
 .btn-wa:hover { background: var(--terra2); }
 
@@ -393,7 +351,7 @@ nav { padding: 1.4rem 5vw; transition: background 0.35s, box-shadow 0.35s; }
 .perfil-link svg { width:12px; height:12px; }
 .perfis-cta { margin-top:4rem; display:flex; justify-content:center; }
 
-#sobre { padding:7rem 5vw; display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:start; }
+#sobre { padding:7rem 5vw; display:grid; grid-template-columns:1fr 0.75fr; gap:6rem; align-items:start; }
 .sobre-quote {
   font-family:var(--serif); font-size:clamp(1.2rem,2vw,1.6rem);
   font-weight:400; font-style:italic; line-height:1.6;
