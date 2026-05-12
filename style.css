@@ -234,6 +234,11 @@ footer {
   #hero { grid-template-columns: 1fr; }
   .hero-text { padding: 7rem 5vw 4rem; }
   .hero-img { height: 60vw; }
+  .hero-img img { object-position: center 20%; }
+  body.lp-tensao .hero-img { height: 85vw; }
+  body.lp-tensao .hero-img img { object-position: center top; }
+  body.lp-desportiva .hero-img img { object-position: center 15%; }
+  body.lp-stress .hero-img img { object-position: right center; }
   .sinais-grid { grid-template-columns: 1fr; }
   #para-quem { grid-template-columns: 1fr; gap: 3rem; }
   .transf-grid { grid-template-columns: 1fr; }
@@ -486,9 +491,9 @@ nav { padding: 1.4rem 5vw; transition: background 0.35s, box-shadow 0.35s; }
 .nav-hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); width:22px; }
 .nav-hamburger.open span:nth-child(2) { opacity:0; }
 .nav-hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); width:22px; }
-.nav-mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:var(--cream); z-index:150; flex-direction:column; justify-content:center; align-items:center; gap:2.5rem; opacity:0; pointer-events:none; transition:opacity 0.3s; }
+.nav-mobile-menu { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:var(--cream); z-index:150; flex-direction:column; justify-content:center; align-items:center; gap:0.75rem; opacity:0; pointer-events:none; transition:opacity 0.3s; }
 .nav-mobile-menu.open { display:flex; opacity:1; pointer-events:auto; }
-.nav-mobile-menu a { font-family:var(--serif); font-size:2rem; font-weight:400; color:var(--cinza); text-decoration:none; transition:color 0.2s; }
+.nav-mobile-menu a { font-family:var(--serif); font-size:1.4rem; font-weight:400; color:var(--cinza); text-decoration:none; transition:color 0.2s; }
 .nav-mobile-menu a:hover { color:var(--terra); }
 .nav-mobile-menu .nav-mobile-cta { font-family:var(--sans); font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase; background:var(--terra); color:var(--cream); padding:0.85rem 2rem; margin-top:1rem; }
 
